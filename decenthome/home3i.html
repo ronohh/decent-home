@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>view</title>
+</head>
+<body>
+    <section class="header">
+        <nav>
+            <img src="">
+
+    <nav class="nav-links">
+        <ul>
+
+       <li> <a href="login.html">LOGIN</a> </li>
+       <li> <a href="aboutus.html">ABOUT</a> </li>
+       <li> <a href="services.html">SERVICES</a> </li>
+       <li> <a href="index.html">HOME</a> </li>
+
+        </ul>
+    </nav>
+
+</nav>
+
+    <div class="slideshow">
+        <div class="mySlides fade">
+            <div class="numberText">1/5</div>
+            <img src="images/home3i/IMG-20240823-WA0071.jpg" style="width: 100%; height: 80dvh">
+            <div class="text"><h1>master bedroom</h1>
+                <li style="color:rgb(73, 248, 64);">spacious</li>
+                <li style="color:rgb(87, 255, 53);">wooden floors</li>
+                <li style="color:rgb(87, 255, 53);">2 closets</li>
+                <li></li>
+            </div>
+        </div>
+        
+
+        <div class="mySlides fade">
+            <div class="numberText">2/5</div>
+            <img src="images/home3i/IMG-20240823-WA0073.jpg" style="width: 90%; height: 450px;">
+            <div class="text"><h1>master lavatory</h1>
+                <li style="color:rgb(87, 255, 53);">spacious</li>
+                <li style="color:rgb(87, 255, 53);">1 bathtub</li>
+                 <li style="color:rgb(87, 255, 53);">2 sinks</li>
+                 <li style="color:rgb(87, 255, 53);">a toilet</li>
+                </div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numberText">3/5</div>
+            <img src="images/home3i/IMG-20240823-WA0072.jpg" style="width: 90%; height: 80dvh">
+            <div class="text"><h1>kitchen</h1></div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numberText">4/5</div>
+            <img src="images/home3i/IMG-20240823-WA0070.jpg" style="width: 100%; height: 80dvh">
+            <div class="text"> <h1>childrens room</h1>
+            <li style="color:rgb(87, 255, 53);">spacious</li>
+            <li style="color:rgb(87, 255, 53);">larger closet</li>
+            <li style="color:rgb(87, 255, 53);">self-contained</li>
+            </div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numberText">5/5</div>
+            <img src="images/home3i/IMG-20240823-WA0074.jpg" style="width: 100%; height: 80dvh">
+            <div class="text">last room</div>
+        </div>
+    </div>
+     
+    <!-- next and previous buttons -->
+     <a class="prev" onclick="plusSlides(-1)">&#10094; </a>
+
+     <a class="next" onclick="plusSlides(1)">&#10095; </a>
+
+     <!-- the dots/circles -->
+
+     <div style="text-align:center;">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+         </div>
+
+
+         <script>
+         let slideIndex = 1;
+            showSlides(slideIndex);
+            
+            //Next/previous controls
+            function plusSlides(n) {
+              showSlides(slideIndex += n );
+            }
+          
+            //thumbnail image controls
+            function currentSlides(n) {
+              showSlides(slideIndex = n);
+            }
+          
+            function showSlides(n) {
+              let i;
+              let slides = document.getElementsByClassName("mySlides");
+              let dots = document.getElementsByClassName("dot");
+          
+              if (n > slides.length){slideIndex =1}
+                   if (n<1) {slideIndex = slides.length }
+                      for (i=0; i<slides.length; i++){slides[i].style.display = "none";}
+                      for(i=0; i<dots.length; i++){
+                          dots[i].className.replace("active","");
+                      }
+                      slides[slideIndex-1].style.display = "block";
+                       dots[slideIndex-1].className +="active";
+                  }
+                  </script>
+</body>
+
+
+</html>
